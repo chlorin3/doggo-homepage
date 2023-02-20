@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/balloon-heart.svg">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>TAIKA | About me</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" id="taika" href="index.html">Taika</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto me-5">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="about.html">About me</a>
+                    <a class="nav-link" href="hobbies.html">My hobbies</a>
+                    <a class="nav-link" href="places.html">Favourite places</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-container mt-3 mx-auto px-5">
+        <h3>General</h3>
+        <div class="row">
+            <div class="col-md-6 col-lg-8">
+                <p>My name is Taika. I am a Bavarian Mountain Hound mix. I was born in October 2018 in a village called Mierzeszyn (Kashubian: Miérzëszëno), Pomeranian Voivodeship, northern Poland.
+        I used to live with a quite big family. There were two children, their parents and a grandmother. Kids were about 3 and 6 years old, so there was a chaos at home and I took part in it as well.
+        I was a really vocal dog without any control. But then I was adopted and moved to Gdańsk in April 2019 (look at the map).</p>
+        <p>My new parents started to train me, taught me commands and manners. So now I am just a vocal dog, but still pretty anxious when it comes to strangers.
+        It has been <span id="years"></span> years<span id="months"> </span>since they adopted me.</p>
+        <p>In July 2022 we moved to small town not so far from Wroclaw.
+        I used to be a beach dog that fell in love with digging holes in sand, but now I am a mountain doggo that spends lots of time hiking and digging holes in dirt.
+        Sometimes I even bring dead animals' parts from the woods - awesome.</p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1R78jLcea-JzpGm2nukiB7oQ0SD1SkSU&ehbc=2E312F" class="my-map"></iframe>
+            </div>
+        </div>
+    <hr>
+    <h3>Appearance</h3>
+    <p>I am 41 cm high and weigh between 16 and 18 kg.</p>
+    <p>My coat is short (but a bit longer than Bavarian Mountain Hound's one), shiny and moderately harsh. It is
+        finer on the head and ears, harsher and longer on the abdomen, legs, and tail. It is in a shade of
+        black-masked fawn.</p>
+    <p> I am very wary towards strangers or anyone I don't know approaching me or my humans. I am vigilant and very attached to my family. When hunting, I am hard, single-minded, and persistent,
+        courageous, spirited, fast and agile. I am at ease on a rugged terrain, with a superb nose and powerful
+        hunting instinct.</p>
+    <hr>
+    <h3>Care</h3>
+    <p>I am not suited for city life and that is why I have recently moved to a small town in the central Sudetan.
+        Space and great amount of exercise is essential to me. If I am not kept mentally stimulated I may become bored, unhappy and sometimes destructive.
+        Other than that, I also require regular brushing.</p>
+    </div>
+
+    <footer class="footer my-footer mt-auto py-3 bg-light">
+        <div class="container">
+          <span class="text-muted">Github: @chlorin3<br>Made for Harvard's CS50 2022</span>
+        </div>
+      </footer>
+
+      <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        let month = d.getMonth() + 1;
+
+        if (month > 5)
+        {
+            document.querySelector("#years").innerHTML = year - 2019;
+            let num_months = month - 4;
+            document.querySelector("#months").innerHTML = " and " + num_months + " months ";
+        }
+        else if (month == 5)
+        {
+            document.querySelector("#years").innerHTML = year - 2019;
+            let num_months = month - 4;
+            document.querySelector("#months").innerHTML = " and " + num_months + " month ";
+        }
+        else if (month > 0 && month < 4)
+        {
+            document.querySelector("#years").innerHTML = year - 2019 - 1;
+            let num_months = 12 - 4 + month;
+            document.querySelector("#months").innerHTML = " and " + num_months + " months ";
+        }
+        else
+        {
+            document.querySelector("#years").innerHTML = year - 2019;
+        }
+      </script>
+</body>
+
+</html>
